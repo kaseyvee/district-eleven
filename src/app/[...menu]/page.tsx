@@ -1,8 +1,9 @@
-import { Metadata } from 'next'
- 
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+
 export const metadata: Metadata = {
-  title: 'Menu | District Eleven',
-}
+  title: "Menu | District Eleven",
+};
 
 import { getContentfulData } from "@/api/getContentfulData";
 import getMenuType from "@/helpers/getMenuType";
@@ -15,17 +16,14 @@ import DrinkSection from "@/components/menuPages/drinks/DrinkSection";
 
 export const dynamic = "error";
 
-export default async function Menu({
-  params,
-}: {
-  params: { menu: string };
-}) {
-  const slug = params.menu;
+export default async function Menu({ params }: { params: { menu: string } }) {
+  const slug = params.menu[0];
+  console.log(slug)
 
   const data: any = await getContentfulData();
 
   const menuTypes: any = {
-    "menu": {
+    menu: {
       title: "All Day",
       type: "allDay",
     },
@@ -39,43 +37,54 @@ export default async function Menu({
     },
   };
 
-  if (!menuTypes[slug]) {
-    throw new Error("We didn't find that page.");
+  if (slug !== "menu" && slug !== "happyHour" && slug !== "takeOut") {
+    throw new Error("Not a menu.")
   }
 
   const currentMenuType = menuTypes[slug].type;
+
 
   const menu = getMenuType(data.menu, currentMenuType);
   const drinks = getMenuType(data.drinks, currentMenuType);
 
   const allDayMenu = Object.entries(menu).map(([key, value]: [string, any]) => {
     if (value.length !== 0) {
-      return <MenuSection key={key} menuType={currentMenuType} menuItems={value} />;
+      return (
+        <MenuSection key={key} menuType={currentMenuType} menuItems={value} />
+      );
     }
   });
 
   const allDayDrinksMenu = Object.entries(drinks).map(
     ([key, value]: [string, any]) => {
       if (value.length !== 0) {
-        return <DrinkSection key={key} menuType={currentMenuType} drinkItems={value} />;
+        return (
+          <DrinkSection
+            key={key}
+            menuType={currentMenuType}
+            drinkItems={value}
+          />
+        );
       }
     }
   );
 
-  const menuSectionsList = Object.entries(menu).map(([key, value]: [string, any]) => {
-    if (value.length > 0) {
-      return (
-        <li key={key + "menu-nav"}>
-          <HeroButton
-            href={`#${key.toLowerCase()}`}
-            color="white"
-            children={key.toUpperCase()}
-            className="menu-nav-button"
-          />
-        </li>
-      );
+  const menuSectionsList = Object.entries(menu).map(
+    ([key, value]: [string, any]) => {
+      if (value.length > 0) {
+        return (
+          <li key={key + "menu-nav"}>
+            <HeroButton
+              href={`#${key.toLowerCase()}`}
+              color="white"
+              children={key.toUpperCase()}
+              className="menu-nav-button"
+            />
+          </li>
+        );
+      }
     }
-  });
+  );
 
   return (
     <main className="menu-page page">

@@ -14,6 +14,5 @@ export default function getMenuType(menu: any, type: string) {
     return output;
   } catch (error: any) {
     console.log(error.message);
-    throw new Error("Not a menu type.");
   }
 }
