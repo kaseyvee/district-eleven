@@ -25,11 +25,13 @@ function NavBar({ data }: any) {
     addEventListener("resize", () => {
       setDisplay(false);
     });
+    addEventListener("scroll", handleScrollEffect);
 
     return () => {
       removeEventListener("resize", () => {
         setDisplay(false);
       });
+      removeEventListener("scroll", handleScrollEffect)
     };
   }, []);
 
@@ -47,8 +49,6 @@ function NavBar({ data }: any) {
     }
     return setScrollStyle(scrollDownStyle);
   }
-
-  document.addEventListener("scroll", handleScrollEffect);
 
   return (
     <nav className="navbar" style={!display ? scrollStyle : {}}>

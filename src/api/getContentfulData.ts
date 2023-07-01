@@ -43,10 +43,10 @@ export async function getContentfulData() {
         generalInfo,
       };
       
-      console.log(output, "from function")
       return output;
     }
   } catch (error: any) {
     console.log("Error fetching Contentful entries:", error.message);
+    throw new Error("Failed to fetch data from Contentful");
   }
 }

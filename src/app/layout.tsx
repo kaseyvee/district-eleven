@@ -1,12 +1,14 @@
-import "../styles/index.scss";
+import { Metadata } from 'next'
+
+import { getContentfulData } from "@/api/getContentfulData";
 
 import Footer from "@/components/Footer";
 import NavBar from "@/components/navbar";
-import { getContentfulData } from "@/api/getContentfulData";
 
-export const metadata = {
-  title: 'District Eleven',
-  description: 'Late night. Asian-fusion. Snack bar.',
+import "../styles/index.scss";
+ 
+export const metadata: Metadata = {
+  title: 'Menu | District Eleven',
 }
 
 export default async function RootLayout({
