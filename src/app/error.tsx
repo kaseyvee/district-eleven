@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import HeroButton from "@/components/HeroButton";
 
 export default async function Error() {
+  console.log("this is an error");
+  
   return (
     <main className="error-page">
       <div className="wrapper">
