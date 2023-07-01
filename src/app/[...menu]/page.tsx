@@ -39,10 +39,6 @@ export default async function Menu({
     },
   };
 
-  if (!menuTypes[slug]) {
-    throw new Error("We didn't find that page.");
-  }
-
   const currentMenuType = menuTypes[slug].type;
 
   const menu = getMenuType(data.menu, currentMenuType);
