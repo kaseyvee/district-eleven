@@ -1,0 +1,31 @@
+@import "colors";
+@import "fonts";
+@import "buttons";
+@import "components";
+@import "helpers";
+@import "pages";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+
+  body {
+    @include montserrat;
+    height: 100%;
+    background-color: $black;
+
+    li {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

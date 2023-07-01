@@ -1,0 +1,46 @@
+.menu-page {
+  &_nav {
+    display: flex;
+    align-items: flex-end;
+  
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    z-index: 10;
+  
+    width: 100vw;
+    background-color: rgba($black, 0.9);
+  
+    overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  
+    &::-webkit-scrollbar {
+      display: none; /* Chrome */
+    }
+  
+    @media (min-width: 545px) {
+      justify-content: center;
+    }
+  
+    @media (min-width: 768px) {
+      gap: 3rem;
+      top: 4.5rem;
+    }
+  }
+
+  &_sections {
+    display: grid;
+    gap: 4rem;
+    padding: 2rem;
+
+    &_drinks-header {
+      @extend .menu-section_header;
+      color: $white;
+      margin: 0;
+      width: min(100%, 700px);
+      justify-self: center;
+      transform: translateY(30px);
+    }
+  }
+}

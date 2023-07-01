@@ -1,0 +1,66 @@
+$main-button-example-height: 42px;
+$main-button-example-border: 1px solid;
+
+.button {
+  // main styles idk change these its just yolo
+  @include montserrat(700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: $main-button-example-height;
+  padding: 0 1rem;
+  border: $main-button-example-border;
+  border-radius: 50px;
+
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition-duration: 200ms;
+
+  // add styles if there is a picture on the button too, maybe custom styles for dictating left-icon vs right-icon
+  // svg {}
+
+  // if wanting transition effects
+  &:active,
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  // if the button has the same style but only needs color changes
+  &_color {
+    &_yellow {
+      color: $yellow;
+      background-color: $white;
+
+      &:hover,
+      &:focus {
+        color: $yellow;
+        background-color: $black;
+      }
+    }
+
+    &_white {
+      color: $white;
+      background-color: $transparentBlack;
+
+      &:hover,
+      &:focus {
+        color: $yellow;
+        // background-color: $black;
+      }
+    }
+
+    &_black {
+      color: $white;
+      background-color: $black;
+
+      &:hover,
+      &:focus {
+        color: $yellow;
+        background-color: $white;
+      }
+    }
+  }
+}

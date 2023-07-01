@@ -1,0 +1,11 @@
+.footer-button {
+  @include montserrat(500);
+  background: transparent !important;
+  border: none;
+  min-height: fit-content;
+  padding: 0;
+
+  &:hover, &:focus {
+    color: $white;
+  }
+}

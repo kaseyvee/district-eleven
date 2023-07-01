@@ -1,0 +1,29 @@
+.bottle-item {
+  &_main {
+    display: flex;
+    justify-content: space-between;
+
+    &_words {
+      &_name {
+        font-weight: 700;
+        color: $white !important;
+        font-style: normal !important;
+        margin-right: 0.25rem !important;
+      }
+
+      &_size {
+        margin-right: 0.25rem !important;
+      }
+
+      &_alcohol-content {
+        font-style: italic;
+        color: $yellow;
+      }
+    }
+
+    &_price {
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+}

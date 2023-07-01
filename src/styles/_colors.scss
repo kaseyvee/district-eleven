@@ -1,0 +1,14 @@
+// Adding a new color...
+// 1. Add to the "Standard Color Declarations"
+// 2. Add to the theme-colors map
+// 3. Add to the :export statement
+// 4. Add to the interface in colors.ts
+
+/* Standard Color Declarations */
+$yellow: #D3AF37;
+$white: #FFFCF5;
+$black: #1E1E1E;
+$transparentBlack: rgba(30, 30, 30, 0.102);
+
+/* gradients */
+$blackFade: linear-gradient(180deg, #1e1e1edd 0.1%, #1e1e1e00 99.9%);

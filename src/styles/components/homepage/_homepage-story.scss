@@ -1,0 +1,56 @@
+.homepage-story {
+  background-color: $white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  padding: 4rem 2rem 6rem 2rem;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &_first {
+    &_highlight {
+      white-space: nowrap;
+      @include montserrat(700);
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        background-color: $yellow;
+        position: absolute;
+        transform: translate(-0.25rem, 0.75rem);
+        width: 11.5rem;
+        height: 1rem;
+        z-index: -1;
+      }
+    }
+  }
+
+  @media (min-width: 769px) {
+    padding-bottom: 10rem;
+
+    &_first,
+    &_second {
+      max-width: 50rem;
+      font-size: 36px;
+    }
+
+    &_first {
+      &_highlight {
+        &::before {
+          transform: translate(-0.25rem, 1rem);
+          width: 17rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+}

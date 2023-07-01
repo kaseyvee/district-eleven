@@ -1,0 +1,16 @@
+@import "homepage";
+@import "menu-page";
+@import "error-page";
+
+.page {
+  animation: fadeIn 200ms ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

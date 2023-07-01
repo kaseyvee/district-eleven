@@ -1,0 +1,81 @@
+.menu-item {
+  &_main {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    &_words {
+      p {
+        font-style: italic;
+        line-height: 1.3rem;
+      }
+
+      header {
+        font-weight: 700;
+      }
+
+      header,
+      span {
+        display: inline;
+        margin-right: 0.5rem;
+      }
+
+      span {
+        color: $yellow;
+        font-style: italic;
+      }
+
+      &_diets {
+        display: inline;
+
+        img {
+          margin-right: 0.25rem;
+          width: 1rem;
+        }
+      }
+    }
+
+    &_price {
+      font-style: italic;
+    }
+  }
+
+  &_variation {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+
+    &_words {
+      header {
+        font-weight: 700;
+      }
+
+      span,
+      header,
+      p {
+        display: inline;
+        margin-right: 0.5rem;
+      }
+
+      p {
+        font-style: italic;
+      }
+    }
+
+    &_price {
+      font-style: italic;
+    }
+  }
+
+  @media (min-width: 769px) {
+    &_main {
+      gap: 2rem;
+    }
+  }
+}
+
+.sold-out {
+  text-decoration: line-through;
+}
