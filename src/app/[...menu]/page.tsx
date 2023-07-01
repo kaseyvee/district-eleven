@@ -17,7 +17,8 @@ import DrinkSection from "@/components/menuPages/drinks/DrinkSection";
 export const dynamic = "error";
 
 export default async function Menu({ params }: { params: { menu: string } }) {
-  const slug = params.menu;
+  const slug = params.menu[0];
+  console.log(slug)
 
   const data: any = await getContentfulData();
 
