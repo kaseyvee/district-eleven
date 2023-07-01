@@ -4,6 +4,11 @@ import Footer from "@/components/Footer";
 import NavBar from "@/components/navbar";
 import { getContentfulData } from "@/api/getContentfulData";
 
+export const metadata = {
+  title: 'District Eleven',
+  description: 'Late night. Asian-fusion. Snack bar.',
+}
+
 export default async function RootLayout({
   children,
 }: {
@@ -13,6 +18,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <link rel='icon' href='/favicon.png'/>
+      </head>
       <body>
         <NavBar data={data} />
         {children}

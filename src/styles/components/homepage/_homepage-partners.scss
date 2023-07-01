@@ -31,9 +31,12 @@
       li {
         display: flex;
         justify-content: center;
+        align-items: center;
 
         img {
           mix-blend-mode: multiply;
+          width: 100%;
+          height: fit-content;
         }
       }
     }
@@ -66,6 +69,11 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        align-content: center;
+
+        li {
+          width: 40%;
+        }
       }
     }
   }

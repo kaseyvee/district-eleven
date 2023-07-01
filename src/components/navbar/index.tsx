@@ -9,7 +9,7 @@ import Logo from "../../assets/logo.svg";
 import Open from "../../assets/menu-open-button.svg";
 import Close from "../../assets/menu-close-button.svg";
 
-const NavBar: React.FC = ({ data }: any) => {
+function NavBar({ data }: any) {
   const scrollUpStyle = {
     animation: "scrollUp 500ms ease-in-out forwards",
     backgroundColor: "#1E1E1E",
