@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import { getContentfulData } from "@/api/getContentfulData";
+import { getContentfulData } from "@/app/api/getContentfulData";
 
 import Footer from "@/components/Footer";
 import NavBar from "@/components/navbar";
