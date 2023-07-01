@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { notFound } from "next/navigation"
  
 export const metadata: Metadata = {
   title: 'Menu | District Eleven',
@@ -40,6 +41,10 @@ export default async function Menu({
   };
 
   const currentMenuType = menuTypes[slug].type;
+
+  if (!currentMenuType) {
+    notFound();
+  }
 
   const menu = getMenuType(data.menu, currentMenuType);
   const drinks = getMenuType(data.drinks, currentMenuType);
