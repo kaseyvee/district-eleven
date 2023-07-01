@@ -1,34 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# District Eleven Website Redesign
 
-## Getting Started
+This repository is a continuation and conversion of a React app to a Next.js app. Original repository can be found [here](https://github.com/kaseyvee/D11).
 
-First, run the development server:
+## Before:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Desktop
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<div>
+  <img src="https://i.imgur.com/fU2F7cT.png" alt="Homepage hero view desktop" width="500">
+  <img src="https://i.imgur.com/4MgYHhQ.png" alt="Menu page view desktop" width="500">
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Mobile
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<div>
+  <img src="https://i.imgur.com/ePdK40D.png" alt="Homepage hero view mobile" width="250">
+  <img src="https://i.imgur.com/vI24etg.png" alt="Menu page view mobile" width="250">
+</div>
 
-## Learn More
+## After:
 
-To learn more about Next.js, take a look at the following resources:
+### Desktop
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<div>
+  <img src="https://i.imgur.com/u5XHw2T.png" alt="Homepage hero view desktop" width="500">
+  <img src="https://i.imgur.com/gCQ4NgS.png" alt="Menu page view desktop" width="500">
+</div>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Mobile
 
-## Deploy on Vercel
+<div>
+  <img src="https://i.imgur.com/aECSJAK.png" alt="Homepage hero view mobile" width="250">
+  <img src="https://i.imgur.com/dX37nS2.png" alt="Menu page view mobile" width="250">
+</div>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Original website frustrations & solutions:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Frustration**: Updating menu items is a repetitive task that must be changed manually on all menu pages (all day menu, happy hour, and take-out). <br>
+   **Solution**: Request all menu item entries from Contentful at initial visit and use boolean values to dynamically render associated menu items to each menu page. User only needs to update item once on Contentful and publish changes.
+
+2. **Frustration**: Longer customer interactions due to sold out menu items that are not reflected on online menu. Servers do not have access to make quick menu updates during service. Can probably change on server iPads, but UI allows the website to be vulnerable to mistaken layout changes (ie. accidentally adding things where they shouldn't be, accidentally deleting other content, etc.). <br>
+   **Solution**: Contentful UI allows to make swift menu changes on server iPads with ease, without the website being vulnerable to layout shifts/mistakes. This change is made by simply toggling a boolean value and publishing these changes.
+
+3. **Frustration**: Seasonal or rotating menu items that should be removed completely from customer view must be manually typed back onto the menu when a menu item is back in season/rotation. <br>
+   **Solution**: Contentful allows for menu items to be unpublished, removing items from customer view, but retaining the data to be republished at a later time. Staff do not need to remember menu item names, descriptions, and prices, nor do they have to wait for management to make these changes.
+
+4. **Frustration**: Longer menu navigation for customers on mobile due to having to manually scroll to each section. <br>
+   **Solution**: Implement menu section navigation bar that remains at the top of the screen, so customers can jump from food to drinks, for example.
+
+## To do:
+
+- change drink category names
+- check if vietnamese categories are correct lol
+- convert project to nextjs app for ssg and implement contentful webhooks
+
+## Furthur development:
+
+- get better restaurant/food photos
+- implement 3rd party map in footer
+- make menu section navigation more obvious it is scrollable on mobile
