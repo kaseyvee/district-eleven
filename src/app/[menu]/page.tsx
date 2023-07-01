@@ -13,6 +13,8 @@ import DietTable from "@/components/menuPages/food/DietTable";
 import MenuSection from "@/components/menuPages/food/MenuSection";
 import DrinkSection from "@/components/menuPages/drinks/DrinkSection";
 
+export const dynamic = "error";
+
 export default async function Menu({
   params,
 }: {

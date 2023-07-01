@@ -52,7 +52,6 @@ This repository is a continuation and conversion of a React app to a Next.js app
 
 - change drink category names
 - check if vietnamese categories are correct lol
-- convert project to nextjs app for ssg and implement contentful webhooks
 
 ## Furthur development:
 
