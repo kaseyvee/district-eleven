@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Menu | District Eleven",
 };
 
-import { getContentfulData } from "@/api/getContentfulData";
+import { getContentfulData } from "@/app/api/getContentfulData";
 import getMenuType from "@/helpers/getMenuType";
 
 import PageHeader from "@/components/menuPages/PageHeader";
@@ -37,7 +37,7 @@ export default async function Menu({ params }: { params: { menu: string } }) {
     },
   };
 
-  if (slug !== "menu" && slug !== "happyHour" && slug !== "takeOut") {
+  if (slug !== "menu" && slug !== "happy-hour" && slug !== "take-out") {
     throw new Error("Not a menu.")
   }
 

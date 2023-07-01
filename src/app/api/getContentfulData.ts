@@ -1,4 +1,4 @@
-import { client } from "@/app/contentful";
+import { client } from "@/contentful";
 import cleanUpDrinksData from "@/helpers/cleanUpDrinksData";
 import cleanUpMenuData from "@/helpers/cleanUpMenuData";
 

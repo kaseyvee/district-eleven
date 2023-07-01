@@ -1,4 +1,4 @@
-import { getContentfulData } from "@/api/getContentfulData";
+import { getContentfulData } from "@/app/api/getContentfulData";
 import HomepageHero from "@/components/homepage/HomepageHero";
 import HomepagePartners from "@/components/homepage/HomepagePartners";
 import HomepageStory from "@/components/homepage/HomepageStory";
