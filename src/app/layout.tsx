@@ -8,7 +8,8 @@ import NavBar from "@/components/navbar";
 import "../styles/index.scss";
  
 export const metadata: Metadata = {
-  title: 'Menu | District Eleven',
+  title: 'District Eleven',
+  description: 'Late night. Asian-fusion. Snack bar.',
 }
 
 export default async function RootLayout({
