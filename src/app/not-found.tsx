@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import HeroButton from "@/components/HeroButton";
 
-export default function Error() {
+export default function NotFound() {
   return (
     <main className="error-page">
       <div className="wrapper">
