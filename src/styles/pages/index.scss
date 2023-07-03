@@ -16,7 +16,7 @@
 }
 
 .fixed-background {
-  @media (min-width: 1100px) {
+  @media (min-width: 769px) {
     background-attachment: fixed;
   }
 }
