@@ -1,17 +1,12 @@
-"use client";
-
-import useBackgroundFixed from "@/helpers/useBackgroundFixed";
 import { motion } from "framer-motion";
 
 import HeroButton from "../HeroButton";
 
 function HomepageHero({ data }: any) {
-  const bgAttachFixedSupport = useBackgroundFixed();
-
   const reservations = data.generalInfo.reservations;
 
   return (
-    <section className={`homepage-hero ${bgAttachFixedSupport ? "fixed-background" : ""}`}>
+    <section className="homepage-hero">
       <div className="wrapper">
         <motion.div
           className="homepage-hero_content"
