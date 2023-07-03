@@ -57,8 +57,6 @@
   }
 
   @media (min-width: 768px) {
-    background-attachment: fixed;
-    background-position-y: 95%;
     padding-top: 10rem;
     padding-bottom: 6rem;
     min-height: unset;
@@ -76,5 +74,10 @@
     &_menu-sections {
       gap: 3rem;
     }
+  }
+
+  @media (min-width: 1100px) {
+    background-attachment: fixed;
+    background-position-y: 95%;
   }
 }
