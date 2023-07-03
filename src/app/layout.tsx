@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react';
 
 import { getContentfulData } from "@/app/api/getContentfulData";
 
@@ -24,6 +25,7 @@ export default async function RootLayout({
       <body>
         <NavBar data={data} />
         {children}
+        <Analytics />
         <Footer data={data} />
       </body>
     </html>
