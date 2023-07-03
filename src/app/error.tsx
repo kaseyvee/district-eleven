@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import HeroButton from "@/components/HeroButton";
 
-export const dynamic = "error";
+export const dynamic = 'force-dynamic'
 
 export default function Error() {
   return (
