@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import HeroButton from "../HeroButton";
 
 interface IProps {
@@ -6,8 +7,18 @@ interface IProps {
 }
 
 const PageHeader: React.FC<IProps> = ({ title, menuType }: IProps) => {
+  const [isBackgroundAttachmentFixedSupported, setIsBackgroundAttachmentFixedSupported] = useState
+  (false);
+
+  useEffect(() => {
+    const el = document.createElement('div');
+    el.style.backgroundAttachment = 'fixed';
+
+    setIsBackgroundAttachmentFixedSupported(el.style.backgroundAttachment === 'fixed');
+  }, []);
+
   return (
-    <div className="page-header">
+    <div className={`page-header ${isBackgroundAttachmentFixedSupported ? "fixed-background" : ""}`}>
       <div className="page-header_heading">
         <h1 className="page-header_heading_title">{title}</h1>
         {menuType === "happyHour" && <span className="page-header_heading_blurb">served from 5pm to 7pm</span>}

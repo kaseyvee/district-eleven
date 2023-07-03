@@ -1,14 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 import HeroButton from "../HeroButton";
 
-function HomepageHero({data}: any) {
+function HomepageHero({ data }: any) {
+  const [isBackgroundAttachmentFixedSupported, setIsBackgroundAttachmentFixedSupported] = useState(false);
+
+  useEffect(() => {
+    const el = document.createElement('div');
+    el.style.backgroundAttachment = 'fixed';
+
+    setIsBackgroundAttachmentFixedSupported(el.style.backgroundAttachment === 'fixed');
+  }, []);
+
   const reservations = data.generalInfo.reservations;
 
   return (
-    <section className="homepage-hero">
+    <section className={`homepage-hero ${isBackgroundAttachmentFixedSupported ? "fixed-background" : ""}`}>
       <div className="wrapper">
         <motion.div
           className="homepage-hero_content"

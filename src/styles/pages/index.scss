@@ -14,3 +14,9 @@
     opacity: 1;
   }
 }
+
+.fixed-background {
+  @media (min-width: 1100px) {
+    background-attachment: fixed;
+  }
+}
