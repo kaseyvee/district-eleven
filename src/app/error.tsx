@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 
 import HeroButton from "@/components/HeroButton";
 
-export default function Error({ error }: { error: Error }) {
+export const dynamic = "auto";
+
+export default function Error() {
   return (
     <main className="error-page">
       <div className="wrapper">
