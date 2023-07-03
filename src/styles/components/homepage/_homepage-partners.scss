@@ -21,17 +21,21 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-
+    
     &_companies {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      width: fit-content;
-
+      
       li {
+        flex-grow: 1;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:last-child {
+          flex-grow: initial;
+        }
 
         img {
           mix-blend-mode: multiply;

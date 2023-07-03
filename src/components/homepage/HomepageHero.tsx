@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import HeroButton from "../HeroButton";
 
-function HomepageHero({data}: any) {
+function HomepageHero({ data }: any) {
   const reservations = data.generalInfo.reservations;
 
   return (

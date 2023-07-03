@@ -1,5 +1,6 @@
+import { notFound } from 'next/navigation'
+
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Menu | District Eleven",
@@ -17,8 +18,7 @@ import DrinkSection from "@/components/menuPages/drinks/DrinkSection";
 export const dynamic = "error";
 
 export default async function Menu({ params }: { params: { menu: string } }) {
-  const slug = params.menu[0];
-  console.log(slug)
+  const slug = params.menu;
 
   const data: any = await getContentfulData();
 
@@ -38,11 +38,10 @@ export default async function Menu({ params }: { params: { menu: string } }) {
   };
 
   if (slug !== "menu" && slug !== "happy-hour" && slug !== "take-out") {
-    throw new Error("Not a menu.")
+    notFound();
   }
 
   const currentMenuType = menuTypes[slug].type;
-
 
   const menu = getMenuType(data.menu, currentMenuType);
   const drinks = getMenuType(data.drinks, currentMenuType);
