@@ -50,6 +50,7 @@ This repository is a continuation and conversion of a React app to a Next.js app
 
 ## To do:
 
+- refactor drinks/menu section and condense into single component?
 - change drink category names
 - check if vietnamese categories are correct lol
 
@@ -58,3 +59,10 @@ This repository is a continuation and conversion of a React app to a Next.js app
 - get better restaurant/food photos
 - implement 3rd party map in footer
 - make menu section navigation more obvious it is scrollable on mobile
+
+## Feature requests:
+- change background color from black to white when scrolling down to drinks
+
+## Physical menu requests:
+- single page / double sided (1 side food / 1 side drinks)
+  - food side background black / drink side background white
