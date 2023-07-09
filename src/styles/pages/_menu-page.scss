@@ -1,4 +1,5 @@
 .menu-page {
+  padding-bottom: 2rem;
   &_nav {
     display: flex;
     align-items: flex-end;
@@ -42,5 +43,12 @@
       justify-self: center;
       transform: translateY(30px);
     }
+  }
+
+  &_tax-blurb {
+    color: $white;
+    text-align: center;
+    font-style: italic;
+    margin-block: 2rem;
   }
 }

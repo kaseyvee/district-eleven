@@ -116,6 +116,8 @@ export default async function Menu({ params }: { params: { menu: string } }) {
         </header>
         {allDayDrinksMenu}
       </div>
+
+      <p className="menu-page_tax-blurb">taxes not included in prices</p>
     </main>
   );
 }
