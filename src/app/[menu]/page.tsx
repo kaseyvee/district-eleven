@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation'
+import { notFound } from "next/navigation";
 
 import { Metadata } from "next";
 
@@ -14,6 +14,7 @@ import HeroButton from "@/components/HeroButton";
 import DietTable from "@/components/menuPages/food/DietTable";
 import MenuSection from "@/components/menuPages/food/MenuSection";
 import DrinkSection from "@/components/menuPages/drinks/DrinkSection";
+import SoupAddOns from "@/components/menuPages/food/SoupAddOns";
 
 export const dynamic = "error";
 
