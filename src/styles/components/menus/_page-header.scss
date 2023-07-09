@@ -80,4 +80,9 @@
     background-attachment: fixed;
     background-position-y: 95%;
   }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) and (pointer:coarse),
+  screen and (-webkit-touch-callout: none) {
+    background-attachment: scroll;
+  }
 }
