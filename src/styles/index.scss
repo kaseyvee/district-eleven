@@ -19,7 +19,7 @@ html {
     @include montserrat;
     height: 100%;
     background-color: $black;
-    overflow-y: hidden;
+    overflow-x: hidden;
 
     li {
       list-style-type: none;
