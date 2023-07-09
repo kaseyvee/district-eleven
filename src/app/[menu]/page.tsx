@@ -111,7 +111,7 @@ export default async function Menu({ params }: { params: { menu: string } }) {
       <div className="menu-page_sections" id="drinks">
         <header className="menu-page_sections_drinks-header">
           <h2>Drinks</h2>
-          <span>đồ uống</span>
+          <span>đồ uống</span>
         </header>
         {allDayDrinksMenu}
       </div>
