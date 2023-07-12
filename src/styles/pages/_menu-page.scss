@@ -24,7 +24,7 @@
       justify-content: center;
     }
   
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       gap: 3rem;
       top: 4.5rem;
     }
@@ -41,9 +41,18 @@
       margin: 0;
       width: min(100%, 700px);
       justify-self: center;
-      transform: translateY(30px);
+    }
+    
+    &_drinks-list {
+      display: grid;
+      gap: 4rem;
     }
   }
+
+  #drinks {
+    gap: 2rem;
+  }
+  
 
   &_tax-blurb {
     color: $white;

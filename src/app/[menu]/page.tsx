@@ -10,11 +10,10 @@ import { getContentfulData } from "@/app/api/getContentfulData";
 import getMenuType from "@/helpers/getMenuType";
 
 import PageHeader from "@/components/menuPages/PageHeader";
-import HeroButton from "@/components/HeroButton";
 import DietTable from "@/components/menuPages/food/DietTable";
 import MenuSection from "@/components/menuPages/food/MenuSection";
 import DrinkSection from "@/components/menuPages/drinks/DrinkSection";
-import SoupAddOns from "@/components/menuPages/food/SoupAddOns";
+import { MenuNav } from "@/components/menuPages/food/MenuNav";
 
 export const dynamic = "error";
 
@@ -69,40 +68,13 @@ export default async function Menu({ params }: { params: { menu: string } }) {
     }
   );
 
-  const menuSectionsList = Object.entries(menu).map(
-    ([key, value]: [string, any]) => {
-      if (value.length > 0) {
-        return (
-          <li key={key + "menu-nav"}>
-            <HeroButton
-              href={`#${key.toLowerCase()}`}
-              color="white"
-              children={key.toUpperCase()}
-              className="menu-nav-button"
-            />
-          </li>
-        );
-      }
-    }
-  );
-
   return (
     <main className="menu-page page">
       <PageHeader
         menuType={currentMenuType}
         title={`${menuTypes[slug].title.toUpperCase()} MENU`}
       />
-      <ul className="menu-page_nav">
-        {menuSectionsList}
-        <li>
-          <HeroButton
-            href="#drinks"
-            color="white"
-            children="DRINKS"
-            className="menu-nav-button"
-          />
-        </li>
-      </ul>
+      <MenuNav menu={menu} />
 
       <div className="menu-page_sections">
         {allDayMenu}
@@ -114,7 +86,7 @@ export default async function Menu({ params }: { params: { menu: string } }) {
           <h2>Drinks</h2>
           <span>đồ uống</span>
         </header>
-        {allDayDrinksMenu}
+        <div className="menu-page_sections_drinks-list">{allDayDrinksMenu}</div>
       </div>
 
       <p className="menu-page_tax-blurb">taxes not included in prices</p>
