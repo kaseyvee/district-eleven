@@ -1,4 +1,5 @@
 import MenuItem from "./MenuItem";
+import SoupAddOns from "./SoupAddOns";
 
 interface IProps {
   menuItems: {
@@ -48,6 +49,7 @@ const MenuSection: React.FC<IProps> = ({ menuItems, menuType }) => {
           <span>{categoryVietnamese}</span>
         </header>
         <ul className="menu-section_menu-items">{menuList}</ul>
+        {categoryEnglish === "Authentic" && <SoupAddOns />}
       </div>
     </section>
   );

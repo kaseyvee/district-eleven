@@ -1,0 +1,39 @@
+.soup-add-ons {
+  color: $white;
+  display: grid;
+  gap: 1rem;
+  justify-self: center;
+  border-top: solid $white 1px;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 700px;
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    span {
+      color: $yellow;
+      font-style: italic;
+    }
+  }
+
+  ul {
+    display: grid;
+    gap: 0.5rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  @media (min-width: 500px) {
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
