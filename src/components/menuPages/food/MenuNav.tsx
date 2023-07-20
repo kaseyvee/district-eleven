@@ -6,7 +6,7 @@ import HeroButton from "@/components/HeroButton";
 import { scrollToSection } from "@/helpers/scrollToSection";
 
 export const MenuNav = ({ menu }: any) => {
-  const [currentSection, setCurrentSection] = useState<string | null>(
+  const [currentSection, setCurrentSection] = useState<string>(
     Object.keys(menu)[0]
   );
 
