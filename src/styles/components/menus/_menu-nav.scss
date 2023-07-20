@@ -1,0 +1,32 @@
+.menu-nav {
+  display: flex;
+  align-items: flex-end;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  width: 100vw;
+  background-color: rgba($black, 0.9);
+
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome */
+  }
+
+  @media (min-width: 545px) {
+    justify-content: center;
+  }
+
+  @media (min-width: 769px) {
+    gap: 3rem;
+    top: 4.5rem;
+  }
+}
+
+.current-section {
+  border-bottom: 2px solid $yellow;
+}
