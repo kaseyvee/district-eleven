@@ -1,0 +1,9 @@
+.jacky-page {
+  @extend .homepage-hero;
+  background: url("/jacky.webp") center no-repeat;
+  background-size: cover;
+
+  @media (min-width: 769px) {
+    background-attachment: fixed;
+  }
+}
