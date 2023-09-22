@@ -25,8 +25,5 @@
     "react-markdown": "^8.0.7",
     "sass": "^1.63.6",
     "typescript": "5.0.4"
-  },
-  "exports": {
-    "./server.edge": "./path/to/server.edge.js"
   }
 }
