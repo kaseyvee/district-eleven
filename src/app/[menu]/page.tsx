@@ -15,7 +15,7 @@ import MenuSection from "@/components/menuPages/food/MenuSection";
 import DrinkSection from "@/components/menuPages/drinks/DrinkSection";
 import { MenuNav } from "@/components/menuPages/food/MenuNav";
 
-// export const dynamic = "error";
+export const dynamic = "force-static";
 
 export default async function Menu({ params }: { params: { menu: string } }) {
   const slug = params.menu;
