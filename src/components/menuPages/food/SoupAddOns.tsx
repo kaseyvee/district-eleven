@@ -16,9 +16,6 @@ function SoupAddOns({ addOns }: any) {
       <ul>
         {/* {addOnsList} */}
         <li>
-          <p>+ assorted veggies</p>
-        </li>
-        <li>
           <p>+ extra meat</p>
         </li>
         <li>
