@@ -19,6 +19,7 @@ interface IProps {
       image: string;
     }[];
     addOns?: {
+      id: string;
       name?: string;
       description?: string;
       price: number;

@@ -17,6 +17,7 @@ interface IProps {
       image: string;
     }[];
     addOns?: {
+      id: string;
       name?: string;
       description?: string;
       price: number;
@@ -28,10 +29,7 @@ interface IProps {
 const MenuItem: React.FC<IProps> = ({ menuItem, menuType }) => {
   const itemVariations = menuItem.addOns?.map((variation) => {
     return (
-      <div
-        key={variation.name || variation.description}
-        className="menu-item_variation"
-      >
+      <div key={variation.id} className="menu-item_variation">
         <div className="menu-item_variation_words">
           <span>+</span>
           {variation.name && <header>{variation.name}</header>}
@@ -70,7 +68,11 @@ const MenuItem: React.FC<IProps> = ({ menuItem, menuType }) => {
         </div>
 
         <div className="menu-item_main_price">
-          <span>{menuType === "happyHour" ? menuItem.happyHourPrice : menuItem.price}</span>
+          <span>
+            {menuType === "happyHour"
+              ? menuItem.happyHourPrice
+              : menuItem.price}
+          </span>
         </div>
       </div>
 
