@@ -9,6 +9,7 @@ export default function cleanUpMenuData(menu: any[], categories: any[]): any {
     const filteredAddOns =
       item.fields.addOns?.map((addOn: any) => ({
         id: addOn.sys.id,
+        soldOut: addOn.fields.soldOut,
         name: addOn.fields && addOn.fields.name ? addOn.fields.name : null,
         description:
           addOn.fields && addOn.fields.description

@@ -17,6 +17,7 @@ interface IProps {
       image: string;
     }[];
     addOns?: {
+      soldOut?: boolean;
       id: string;
       name?: string;
       description?: string;
@@ -29,7 +30,10 @@ interface IProps {
 const MenuItem: React.FC<IProps> = ({ menuItem, menuType }) => {
   const itemVariations = menuItem.addOns?.map((variation) => {
     return (
-      <div key={variation.id} className="menu-item_variation">
+      <div
+        key={variation.id}
+        className={`menu-item_variation ${variation.soldOut ? "sold-out" : ""}`}
+      >
         <div className="menu-item_variation_words">
           <span>+</span>
           {variation.name && <header>{variation.name}</header>}
@@ -56,7 +60,7 @@ const MenuItem: React.FC<IProps> = ({ menuItem, menuType }) => {
   });
 
   return (
-    <li className={`menu-item ${menuItem.soldOut ? `sold-out` : ""}`}>
+    <li className={`menu-item ${menuItem.soldOut ? "sold-out" : ""}`}>
       <div className="menu-item_main">
         <div className="menu-item_main_words">
           <header>{menuItem.name}</header>
