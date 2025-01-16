@@ -7,7 +7,7 @@ import HeroButton from "../HeroButton";
 interface IProps {
   style?: { animation: string };
   onClick?: () => void;
-  data: any
+  data: any;
 }
 
 function NavItems(props: IProps) {
@@ -17,6 +17,10 @@ function NavItems(props: IProps) {
     {
       name: "HOME",
       link: "/",
+    },
+    {
+      name: "DINE OUT",
+      link: generalInfo.dineOut,
     },
     {
       name: "MENU",
@@ -55,7 +59,7 @@ function NavItems(props: IProps) {
           ) : (
             <HeroButton
               to={item.link}
-              color="white"
+              color={item.name === "DINE OUT" ? "yellow" : "white"}
               children={item.name}
               className="nav-button"
             />
@@ -70,6 +74,6 @@ function NavItems(props: IProps) {
       <AnimatePresence>{itemList}</AnimatePresence>
     </ul>
   );
-};
+}
 
 export default NavItems;

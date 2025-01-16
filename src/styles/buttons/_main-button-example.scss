@@ -32,12 +32,11 @@ $main-button-example-border: 1px solid;
   &_color {
     &_yellow {
       color: $yellow;
-      background-color: $white;
+      background-color: $transparentBlack;
 
       &:hover,
       &:focus {
-        color: $yellow;
-        background-color: $black;
+        color: #9d8128;
       }
     }
 
@@ -48,7 +47,6 @@ $main-button-example-border: 1px solid;
       &:hover,
       &:focus {
         color: $yellow;
-        // background-color: $black;
       }
     }
 

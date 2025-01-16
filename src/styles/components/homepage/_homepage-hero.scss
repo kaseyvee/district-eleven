@@ -46,7 +46,8 @@
 
     &_buttons {
       display: flex;
-      gap: 25px;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
   }
 
@@ -62,8 +63,8 @@
     background-attachment: fixed;
   }
 
-  @media screen and (-webkit-min-device-pixel-ratio: 0) and (pointer:coarse),
-  screen and (-webkit-touch-callout: none) {
+  @media screen and (-webkit-min-device-pixel-ratio: 0) and (pointer: coarse),
+    screen and (-webkit-touch-callout: none) {
     background-attachment: scroll;
   }
 }
