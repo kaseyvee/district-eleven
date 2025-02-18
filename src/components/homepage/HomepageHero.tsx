@@ -6,7 +6,6 @@ import HeroButton from "../HeroButton";
 
 function HomepageHero({ data }: any) {
   const reservations = data.generalInfo.reservations;
-  const dineOut = data.generalInfo.dineOut;
 
   return (
     <section className="homepage-hero">
@@ -41,7 +40,6 @@ function HomepageHero({ data }: any) {
               color="white"
               children="BOOK A TABLE"
             />
-            <HeroButton to={dineOut} color="yellow" children="DINE OUT" />
           </div>
         </motion.div>
       </div>
