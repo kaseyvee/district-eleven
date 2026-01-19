@@ -19,6 +19,10 @@ function NavItems(props: IProps) {
       link: "/",
     },
     {
+      name: "DINE OUT",
+      link: generalInfo.dineOut,
+    },
+    {
       name: "MENU",
       link: "/menu",
     },
