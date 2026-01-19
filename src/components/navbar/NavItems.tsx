@@ -14,30 +14,14 @@ function NavItems(props: IProps) {
   const generalInfo = props.data.generalInfo;
 
   const listItemData = [
-    {
-      name: "HOME",
-      link: "/",
-    },
-    {
-      name: "DINE OUT",
-      link: generalInfo.dineOut,
-    },
-    {
-      name: "MENU",
-      link: "/menu",
-    },
-    {
-      name: "UBEREATS",
-      link: generalInfo.uberEats,
-    },
-    {
-      name: "RESERVATIONS",
-      link: generalInfo.reservations,
-    },
-    {
-      name: "CONTACT US",
-      link: "#footer",
-    },
+    { name: "HOME", link: "/" },
+    ...(generalInfo.dineOut
+      ? [{ name: "DINE OUT", link: generalInfo.dineOut }]
+      : []),
+    { name: "MENU", link: "/menu" },
+    { name: "UBEREATS", link: generalInfo.uberEats },
+    { name: "RESERVATIONS", link: generalInfo.reservations },
+    { name: "CONTACT US", link: "#footer" },
   ];
 
   const itemList = listItemData.map(
