@@ -41,7 +41,9 @@ function HomepageHero({ data }: any) {
               color="white"
               children="BOOK A TABLE"
             />
-            <HeroButton to={dineOut} color="yellow" children="DINE OUT" />
+            {dineOut && (
+              <HeroButton to={dineOut} color="yellow" children="DINE OUT" />
+            )}
           </div>
         </motion.div>
       </div>
