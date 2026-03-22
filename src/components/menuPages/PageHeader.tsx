@@ -23,7 +23,7 @@ const PageHeader: React.FC<IProps> = ({ title, menuType }: IProps) => {
         <h1 className="page-header_heading_title">{title}</h1>
         {menuType === "happyHour" && (
           <span className="page-header_heading_blurb">
-            served from 5pm to 7pm
+            served from 3pm to 6pm
           </span>
         )}
       </div>
