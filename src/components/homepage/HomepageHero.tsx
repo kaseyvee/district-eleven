@@ -20,13 +20,7 @@ function HomepageHero({ data }: any) {
         >
           <h1 className="homepage-hero_content_words">
             <span className="homepage-hero_content_words_header">
-              Late night.
-            </span>
-            <span className="homepage-hero_content_words_header">
-              Asian-fusion.
-            </span>
-            <span className="homepage-hero_content_words_header">
-              Snack bar.
+              Vietnamese-Asian fusion.
             </span>
 
             <span className="homepage-hero_content_words_greeting">
