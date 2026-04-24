@@ -35,6 +35,11 @@ function HomepageHero({ data }: any) {
               color="white"
               children="BOOK A TABLE"
             />
+            <HeroButton
+              to={"https://districteleven.ca/"}
+              color="white"
+              children="ORDER TAKE-OUT"
+            />
             {dineOut && (
               <HeroButton to={dineOut} color="yellow" children="DINE OUT" />
             )}

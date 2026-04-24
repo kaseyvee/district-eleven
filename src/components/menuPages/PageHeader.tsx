@@ -30,8 +30,6 @@ const PageHeader: React.FC<IProps> = ({ title, menuType }: IProps) => {
       <div className="page-header_buttons">
         {title !== "HAPPY HOUR MENU" &&
           renderHeroButton("/happy-hour", "HAPPY HOUR MENU")}
-        {title !== "TAKE-OUT MENU" &&
-          renderHeroButton("/take-out", "TAKE-OUT MENU")}
         {title !== "ALL DAY MENU" && renderHeroButton("/menu", "ALL DAY MENU")}
       </div>
     </div>
