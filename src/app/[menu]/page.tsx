@@ -31,13 +31,9 @@ export default async function Menu({ params }: { params: { menu: string } }) {
       title: "Happy Hour",
       type: "happyHour",
     },
-    "take-out": {
-      title: "Take-Out",
-      type: "takeOut",
-    },
   };
 
-  if (slug !== "menu" && slug !== "happy-hour" && slug !== "take-out") {
+  if (slug !== "menu" && slug !== "happy-hour") {
     notFound();
   }
 
@@ -65,7 +61,7 @@ export default async function Menu({ params }: { params: { menu: string } }) {
           />
         );
       }
-    }
+    },
   );
 
   return (
